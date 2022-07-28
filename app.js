@@ -15,7 +15,7 @@ var app = express();
 var mongoose = require("mongoose");
 
 var DB_URI =
-  "mongodb+srv://eadh_user:eadh_user@cluster0.vv8md.mongodb.net/local-library?retryWrites=true&w=majority";
+  "mongodb+srv://eadh_user:eadh_user@cluster0.vv8md.mongodb.net/mawira-library?retryWrites=true&w=majority";
 var mongoDB = process.env.MONGO_URI || DB_URI;
 
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
