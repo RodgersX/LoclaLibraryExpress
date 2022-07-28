@@ -10,13 +10,13 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var catalogRouter = require("./routes/catalog");
 
+require('dotenv').config()
+
 var app = express();
 
 var mongoose = require("mongoose");
 
-var DB_URI =
-  "mongodb+srv://eadh_user:eadh_user@cluster0.vv8md.mongodb.net/mawira-library?retryWrites=true&w=majority";
-var mongoDB = process.env.MONGO_URI || DB_URI;
+var mongoDB = process.env.MONGO_URI
 
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
